@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevNest Portfolio Guide</title>
+    <meta
+      name="description"
+      content="Пошаговая инструкция по установке и использованию DevNest Portfolio."
+    />
+    <link rel="icon" href="./assets/favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon.png" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body data-page="guide">
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="./index.html">
+          <span class="brand__mark">
+            <img src="./assets/images/logo.png" alt="DevNest Portfolio logo" />
+          </span>
+          <span class="brand__text">
+            <strong>DevNest Portfolio</strong>
+            <span data-i18n="common.brandTag">Конструктор портфолио для разработчиков</span>
+          </span>
+        </a>
+
+        <nav class="nav">
+          <a href="./index.html" data-i18n="common.navHome">Главная</a>
+          <a href="#install" data-i18n="guide.navInstall">Установка</a>
+          <a href="#usage" data-i18n="guide.navUsage">Использование</a>
+          <a href="#export" data-i18n="guide.navExport">Экспорт</a>
+        </nav>
+
+        <div class="topbar__actions">
+          <a
+            class="btn btn--ghost"
+            href="https://github.com/Hasli4/portfolio-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="common.repo"
+          >GitHub</a>
+          <a class="btn btn--primary" href="#download-options" data-i18n="common.download">Скачать</a>
+          <button class="lang-switch" type="button" role="switch" aria-checked="false" aria-label="Language switch" data-lang-toggle>
+            <span class="lang-switch__option lang-switch__option--ru">RU</span>
+            <span class="lang-switch__option lang-switch__option--en">EN</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero hero--guide">
+          <div class="hero__copy">
+            <div class="eyebrow" data-i18n="guide.eyebrow">Установка и работа</div>
+            <h1 data-i18n="guide.title">Пошаговая инструкция: от первого запуска до готового сайта</h1>
+            <p class="hero__lead" data-i18n="guide.lead">
+              Ниже собран спокойный маршрут по установке portable-версии, работе с темами и проектами, настройке языков и экспорту итогового портфолио.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#install" data-i18n="guide.startInstall">Начать с установки</a>
+              <a class="btn btn--secondary" href="./index.html" data-i18n="common.navHome">На главную</a>
+            </div>
+          </div>
+
+          <aside class="guide-sidecard">
+            <strong data-i18n="guide.quickTitle">Коротко о процессе</strong>
+            <ol>
+              <li data-i18n="guide.quick1">Скачать portable-версию и распаковать архив.</li>
+              <li data-i18n="guide.quick2">Заполнить профиль разработчика.</li>
+              <li data-i18n="guide.quick3">Создать темы и карточки проектов.</li>
+              <li data-i18n="guide.quick4">При необходимости включить двуязычный режим.</li>
+              <li data-i18n="guide.quick5">Экспортировать сайт и открыть папку результата.</li>
+            </ol>
+          </aside>
+        </section>
+
+        <section class="section section--downloads" id="download-options">
+          <div class="section__head section__head--wide">
+            <div class="eyebrow" data-i18n="common.downloadEyebrow">Где скачать</div>
+            <h2 data-i18n="common.downloadTitle">Выберите удобный источник загрузки — официальный релиз или прямое облачное зеркало</h2>
+            <p data-i18n="common.downloadLead">Все три варианта ведут к portable-версии приложения. Выбирайте тот способ, который удобнее именно вам.</p>
+          </div>
+
+          <div class="download-grid">
+            <a class="download-card" href="https://github.com/Hasli4/portfolio-app/releases" target="_blank" rel="noopener noreferrer">
+              <span class="download-card__badge">GitHub</span>
+              <strong data-i18n="common.downloadGithubTitle">GitHub Release</strong>
+              <p data-i18n="common.downloadGithubText">Подойдёт, если вы хотите скачать приложение с официальной страницы релиза и сразу увидеть версию.</p>
+              <span class="download-card__action" data-i18n="common.downloadAction">Открыть источник</span>
+            </a>
+
+            <a class="download-card" href="https://disk.yandex.ru/d/iAhuzNTOZwnTJg" target="_blank" rel="noopener noreferrer">
+              <span class="download-card__badge">Yandex Disk</span>
+              <strong data-i18n="common.downloadYandexTitle">Яндекс Диск</strong>
+              <p data-i18n="common.downloadYandexText">Удобный альтернативный вариант, если комфортнее скачивать архив через Яндекс Диск.</p>
+              <span class="download-card__action" data-i18n="common.downloadAction">Открыть источник</span>
+            </a>
+
+            <a class="download-card" href="https://drive.google.com/file/d/1Xk36z5aqSjy_IJ3qOhTVUC0zpxQMRecx/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <span class="download-card__badge">Google Drive</span>
+              <strong data-i18n="common.downloadDriveTitle">Google Drive</strong>
+              <p data-i18n="common.downloadDriveText">Ещё один прямой источник загрузки, если вам удобнее работать через Google Drive.</p>
+              <span class="download-card__action" data-i18n="common.downloadAction">Открыть источник</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="section" id="install">
+          <div class="section__head">
+            <div class="eyebrow" data-i18n="guide.installEyebrow">Установка</div>
+            <h2 data-i18n="guide.installTitle">Как установить portable-версию на Windows</h2>
+          </div>
+
+          <div class="step-list">
+            <article class="step-card">
+              <span>01</span>
+              <h3 data-i18n="guide.install1Title">Проверьте версию Windows</h3>
+              <p data-i18n="guide.install1Text">Приложение рассчитано на Windows 10 и Windows 11. Если на компьютере другая версия системы, работа не гарантируется.</p>
+            </article>
+            <article class="step-card">
+              <span>02</span>
+              <h3 data-i18n="guide.install2Title">Скачайте архив с приложением</h3>
+              <p data-i18n="guide.install2Text">Откройте страницу релизов, скачайте portable-версию и дождитесь завершения загрузки.</p>
+            </article>
+            <article class="step-card">
+              <span>03</span>
+              <h3 data-i18n="guide.install3Title">Распакуйте архив в удобную папку</h3>
+              <p data-i18n="guide.install3Text">Подойдут «Документы» или любая другая рабочая директория, в которой вам удобно хранить программу и экспортируемые сайты.</p>
+            </article>
+            <article class="step-card">
+              <span>04</span>
+              <h3 data-i18n="guide.install4Title">Запустите portable exe</h3>
+              <p>
+                <span data-i18n="guide.install4Text">Откройте распакованную папку и запустите файл приложения. При желании создайте ярлык на рабочем столе.</span>
+                <small class="step-note">
+                  <i data-i18n="guide.install4Note">ПКМ → Отправить → Рабочий стол (создать ярлык)</i>
+                </small>
+              </p>
+            </article>
+          </div>
+
+          <div class="callout">
+            <strong data-i18n="guide.installTipTitle">Подсказка для Windows 11</strong>
+            <p data-i18n="guide.installTipText">Если в контекстном меню не видно создания ярлыка, нажмите «Показать дополнительные параметры» или запускайте приложение напрямую из папки.</p>
+          </div>
+        </section>
+
+        <section class="section section--usage" id="usage">
+          <div class="section__head section__head--wide">
+            <div class="eyebrow" data-i18n="guide.usageEyebrow">Использование</div>
+            <h2 data-i18n="guide.usageTitle">Как пользоваться приложением после запуска</h2>
+            <p data-i18n="guide.usageLead">
+              Ниже собран короткий пошаговый walkthrough. Переключайте шаги и смотрите на соответствующую зону интерфейса.
+            </p>
+          </div>
+
+          <div class="usage-walkthrough" data-usage-slider>
+            <div class="usage-steps" role="tablist" aria-label="Usage steps">
+              <button
+                class="usage-step is-active"
+                id="usage-trigger-1"
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="usage-slide-1"
+                data-usage-trigger="usage-slide-1"
+              >
+                <span class="usage-step__num">01</span>
+                <span class="usage-step__text">
+                  <strong data-i18n="guide.use1Title">1. Заполните профиль разработчика</strong>
+                  <small data-i18n="guide.use1Nav">Имя, био и фото</small>
+                </span>
+              </button>
+
+              <button
+                class="usage-step"
+                id="usage-trigger-2"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="usage-slide-2"
+                data-usage-trigger="usage-slide-2"
+              >
+                <span class="usage-step__num">02</span>
+                <span class="usage-step__text">
+                  <strong data-i18n="guide.use2Title">2. Создайте тему</strong>
+                  <small data-i18n="guide.use2Nav">Структура и экспорт</small>
+                </span>
+              </button>
+
+              <button
+                class="usage-step"
+                id="usage-trigger-3"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="usage-slide-3"
+                data-usage-trigger="usage-slide-3"
+              >
+                <span class="usage-step__num">03</span>
+                <span class="usage-step__text">
+                  <strong data-i18n="guide.use3Title">3. Создайте карточку проекта</strong>
+                  <small data-i18n="guide.use3Nav">Описание, ссылка и обложка</small>
+                </span>
+              </button>
+
+              <button
+                class="usage-step"
+                id="usage-trigger-4"
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="usage-slide-4"
+                data-usage-trigger="usage-slide-4"
+              >
+                <span class="usage-step__num">04</span>
+                <span class="usage-step__text">
+                  <strong data-i18n="guide.use4Title">4. Повторите для остальных работ</strong>
+                  <small data-i18n="guide.use4Nav">Поиск и навигация</small>
+                </span>
+              </button>
+            </div>
+
+            <div class="usage-panels">
+              <article
+                class="usage-slide is-active"
+                id="usage-slide-1"
+                data-usage-panel
+                role="tabpanel"
+                aria-labelledby="usage-trigger-1"
+              >
+                <div class="usage-slide__copy">
+                  <span class="usage-slide__kicker" data-i18n="guide.step1Kicker">Шаг 01</span>
+                  <h3 data-i18n="guide.use1Title">1. Заполните профиль разработчика</h3>
+                  <p data-i18n="guide.use1Text">Слева находится карточка профиля: введите имя, краткое био и выберите фото. После этого нажмите кнопку сохранения профиля.</p>
+                </div>
+
+                <figure class="usage-slide__visual shot-card">
+                  <button
+                    class="zoomable-media"
+                    type="button"
+                    data-lightbox-src="./assets/images/guide-profile-panel.png"
+                    data-lightbox-alt="Developer profile panel"
+                  >
+                    <img src="./assets/images/guide-profile-panel.png" alt="Developer profile panel" />
+                    <span class="zoomable-media__overlay" aria-hidden="true">
+                      <span class="zoomable-media__icon">⤢</span>
+                      <span class="zoomable-media__label" data-i18n="common.zoomHint">Нажмите, чтобы увеличить</span>
+                    </span>
+                  </button>
+                  <figcaption>
+                    <strong data-i18n="guide.use1VisualTitle">Профиль разработчика</strong>
+                    <span data-i18n="guide.use1VisualText">Сначала заполните имя, фото и короткое био. Этот блок сразу формирует верхнюю часть будущего портфолио.</span>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article
+                class="usage-slide"
+                id="usage-slide-2"
+                data-usage-panel
+                role="tabpanel"
+                aria-labelledby="usage-trigger-2"
+                hidden
+              >
+                <div class="usage-slide__copy">
+                  <span class="usage-slide__kicker" data-i18n="guide.step2Kicker">Шаг 02</span>
+                  <h3 data-i18n="guide.use2Title">2. Создайте тему</h3>
+                  <p data-i18n="guide.use2Text">Нажмите «Создать тему», укажите название направления и сохраните его. Темы помогают держать проекты в аккуратной структуре.</p>
+                </div>
+
+                <figure class="usage-slide__visual shot-card">
+                  <button
+                    class="zoomable-media"
+                    type="button"
+                    data-lightbox-src="./assets/images/guide-controls-panel.png"
+                    data-lightbox-alt="Theme controls panel"
+                  >
+                    <img src="./assets/images/guide-controls-panel.png" alt="Theme controls panel" />
+                    <span class="zoomable-media__overlay" aria-hidden="true">
+                      <span class="zoomable-media__icon">⤢</span>
+                      <span class="zoomable-media__label" data-i18n="common.zoomHint">Нажмите, чтобы увеличить</span>
+                    </span>
+                  </button>
+                  <figcaption>
+                    <strong data-i18n="guide.use2VisualTitle">Темы и быстрые действия</strong>
+                    <span data-i18n="guide.use2VisualText">В этой зоне вы создаёте темы, запускаете экспорт и открываете папку с итоговым сайтом.</span>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article
+                class="usage-slide"
+                id="usage-slide-3"
+                data-usage-panel
+                role="tabpanel"
+                aria-labelledby="usage-trigger-3"
+                hidden
+              >
+                <div class="usage-slide__copy">
+                  <span class="usage-slide__kicker" data-i18n="guide.step3Kicker">Шаг 03</span>
+                  <h3 data-i18n="guide.use3Title">3. Создайте карточку проекта</h3>
+                  <p data-i18n="guide.use3Text">Откройте тему, нажмите «Создать проект» и заполните название, описание, ссылку, дополнительную информацию и обложку.</p>
+                </div>
+
+                <figure class="usage-slide__visual shot-card">
+                  <button
+                    class="zoomable-media"
+                    type="button"
+                    data-lightbox-src="./assets/images/guide-workspace-panel.png"
+                    data-lightbox-alt="Project workspace"
+                  >
+                    <img src="./assets/images/guide-workspace-panel.png" alt="Project workspace" />
+                    <span class="zoomable-media__overlay" aria-hidden="true">
+                      <span class="zoomable-media__icon">⤢</span>
+                      <span class="zoomable-media__label" data-i18n="common.zoomHint">Нажмите, чтобы увеличить</span>
+                    </span>
+                  </button>
+                  <figcaption>
+                    <strong data-i18n="guide.use3VisualTitle">Карточки проектов</strong>
+                    <span data-i18n="guide.use3VisualText">После выбора темы рабочая область превращается в место, где живут обложки, описания, ссылки и действия по проекту.</span>
+                  </figcaption>
+                </figure>
+              </article>
+
+              <article
+                class="usage-slide"
+                id="usage-slide-4"
+                data-usage-panel
+                role="tabpanel"
+                aria-labelledby="usage-trigger-4"
+                hidden
+              >
+                <div class="usage-slide__copy">
+                  <span class="usage-slide__kicker" data-i18n="guide.step4Kicker">Шаг 04</span>
+                  <h3 data-i18n="guide.use4Title">4. Повторите для остальных работ</h3>
+                  <p data-i18n="guide.use4Text">Добавляйте новые темы и проекты по мере необходимости. Поиск помогает быстро найти карточку в текущем направлении.</p>
+                </div>
+
+                <figure class="usage-slide__visual shot-card">
+                  <button
+                    class="zoomable-media"
+                    type="button"
+                    data-lightbox-src="./assets/images/admin-app.png"
+                    data-lightbox-alt="Full DevNest interface"
+                  >
+                    <img src="./assets/images/admin-app.png" alt="Full DevNest interface" />
+                    <span class="zoomable-media__overlay" aria-hidden="true">
+                      <span class="zoomable-media__icon">⤢</span>
+                      <span class="zoomable-media__label" data-i18n="common.zoomHint">Нажмите, чтобы увеличить</span>
+                    </span>
+                  </button>
+                  <figcaption>
+                    <strong data-i18n="guide.use4VisualTitle">Полная рабочая картина</strong>
+                    <span data-i18n="guide.use4VisualText">Когда проектов становится больше, помогает связка из тем, поиска и единой рабочей области без лишних переходов.</span>
+                  </figcaption>
+                </figure>
+              </article>
+            </div>
+          </div>
+
+          <div class="guide-map-card">
+            <div class="guide-map-card__copy">
+              <div class="eyebrow" data-i18n="guide.mapEyebrow">Карта интерфейса</div>
+              <h3 data-i18n="guide.mapTitle">Карта интерфейса</h3>
+              <p data-i18n="guide.mapText">Ниже — ориентир по ключевым зонам приложения. Если хотите спокойно рассмотреть интерфейс, откройте схему в полном размере.</p>
+              <p class="guide-map-card__hint" data-i18n="guide.mapHint">Схема автоматически подстраивается под текущий язык страницы: русская версия показывает русские подписи, английская — английские.</p>
+            </div>
+
+            <div class="guide-map-card__media">
+              <figure class="shot-card shot-card--map lang-asset lang-asset--ru">
+                <button
+                  class="zoomable-media"
+                  type="button"
+                  data-lightbox-src="./assets/images/guide-interface-map-ru.png"
+                  data-lightbox-alt="Russian interface map"
+                >
+                  <img src="./assets/images/guide-interface-map-ru.png" alt="Russian interface map" />
+                  <span class="zoomable-media__overlay" aria-hidden="true">
+                    <span class="zoomable-media__icon">⤢</span>
+                    <span class="zoomable-media__label" data-i18n="common.zoomHint">Нажмите, чтобы увеличить</span>
+                  </span>
+                </button>
+              </figure>
+
+              <figure class="shot-card shot-card--map lang-asset lang-asset--en">
+                <button
+                  class="zoomable-media"
+                  type="button"
+                  data-lightbox-src="./assets/images/guide-interface-map-en.png"
+                  data-lightbox-alt="English interface map"
+                >
+                  <img src="./assets/images/guide-interface-map-en.png" alt="English interface map" />
+                  <span class="zoomable-media__overlay" aria-hidden="true">
+                    <span class="zoomable-media__icon">⤢</span>
+                    <span class="zoomable-media__label" data-i18n="common.zoomHint">Нажмите, чтобы увеличить</span>
+                  </span>
+                </button>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section__head">
+            <div class="eyebrow" data-i18n="guide.funcEyebrow">Основные функции</div>
+            <h2 data-i18n="guide.funcTitle">Что именно умеет приложение внутри рабочего процесса</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h3 data-i18n="guide.func1Title">Темы</h3>
+              <p data-i18n="guide.func1Text">Нужны для разделения проектов по направлениям и удобной навигации внутри портфолио.</p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="guide.func2Title">Карточки проектов</h3>
+              <p data-i18n="guide.func2Text">Содержат весь основной контент: название, описание, ссылку, доп. поле и обложку.</p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="guide.func3Title">Фото и обложки</h3>
+              <p data-i18n="guide.func3Text">Изображения выбираются с компьютера и копируются в локальное хранилище приложения.</p>
+            </article>
+            <article class="feature-card">
+              <h3 data-i18n="guide.func4Title">Поиск</h3>
+              <p data-i18n="guide.func4Text">Ускоряет работу, когда проектов внутри темы становится больше.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section section--language">
+          <div class="section__head">
+            <div class="eyebrow" data-i18n="guide.langEyebrow">Языки</div>
+            <h2 data-i18n="guide.langTitle">Как работает переключение языка и двуязычный экспорт</h2>
+          </div>
+
+          <div class="comparison">
+            <div class="comparison__col comparison__col--focus">
+              <span class="comparison__label" data-i18n="guide.langSingleLabel">Обычный режим</span>
+              <ul>
+                <li data-i18n="guide.langSingle1">Переключатель `RU / EN` меняет язык интерфейса приложения.</li>
+                <li data-i18n="guide.langSingle2">Если двуязычный режим выключен, экспортированный сайт будет собран на выбранном в этот момент языке.</li>
+                <li data-i18n="guide.langSingle3">Это удобный вариант, если вам нужна одна конкретная версия портфолио.</li>
+              </ul>
+            </div>
+
+            <div class="comparison__col">
+              <span class="comparison__label" data-i18n="guide.langDualLabel">Двуязычный режим</span>
+              <ul>
+                <li data-i18n="guide.langDual1">Включите «Поддержка двух языков», чтобы появились поля для русского и английского текста.</li>
+                <li data-i18n="guide.langDual2">Заполните обе версии названий, описаний и профиля разработчика.</li>
+                <li data-i18n="guide.langDual3">При экспорте сайт получит собственный переключатель языка и останется полностью статическим.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="export">
+          <div class="section__head">
+            <div class="eyebrow" data-i18n="guide.exportEyebrow">Экспорт</div>
+            <h2 data-i18n="guide.exportTitle">Как получить готовый сайт и что происходит после нажатия кнопки</h2>
+          </div>
+
+          <div class="step-list step-list--wide">
+            <article class="step-card">
+              <span>01</span>
+              <h3 data-i18n="guide.export1Title">Нажмите «Экспортировать сайт»</h3>
+              <p data-i18n="guide.export1Text">Приложение соберёт отдельную папку с HTML, CSS, JS, JSON и всеми нужными изображениями.</p>
+            </article>
+            <article class="step-card">
+              <span>02</span>
+              <h3 data-i18n="guide.export2Title">Откройте папку результата</h3>
+              <p data-i18n="guide.export2Text">Кнопка открытия папки переводит вас сразу к последнему экспортированному сайту.</p>
+            </article>
+            <article class="step-card">
+              <span>03</span>
+              <h3 data-i18n="guide.export3Title">Запустите `index.html`</h3>
+              <p data-i18n="guide.export3Text">Так можно быстро проверить результат локально в браузере до публикации.</p>
+            </article>
+            <article class="step-card">
+              <span>04</span>
+              <h3 data-i18n="guide.export4Title">Загрузите сайт на хостинг</h3>
+              <p data-i18n="guide.export4Text">Экспорт подходит для обычного статического размещения, в том числе на GitHub Pages.</p>
+            </article>
+          </div>
+
+          <div class="content-split">
+            <div class="content-split__main">
+              <div class="callout">
+                <strong data-i18n="guide.storageTitle">Как сохраняются данные</strong>
+                <p data-i18n="guide.storageText">Проекты, темы, фото, обложки и настройки языка хранятся локально в пользовательской папке приложения. Это позволяет не терять данные после перезапуска.</p>
+              </div>
+
+              <div class="callout callout--muted">
+                <strong data-i18n="guide.coverTitle">Что важно знать про фото и обложки</strong>
+                <p data-i18n="guide.coverText">Когда вы выбираете изображение, приложение копирует его в собственное локальное хранилище. Поэтому исходный файл можно хранить где угодно, а экспорт всё равно соберётся корректно.</p>
+              </div>
+            </div>
+
+            <aside class="content-split__aside">
+              <figure class="shot-card shot-card--compact">
+                <button
+                  class="zoomable-media"
+                  type="button"
+                  data-lightbox-src="./assets/images/exported-site.png"
+                  data-lightbox-alt="Exported site screenshot"
+                >
+                  <img src="./assets/images/exported-site.png" alt="Exported site screenshot" />
+                  <span class="zoomable-media__overlay" aria-hidden="true">
+                    <span class="zoomable-media__icon">⤢</span>
+                    <span class="zoomable-media__label" data-i18n="common.zoomHint">Нажмите, чтобы увеличить</span>
+                  </span>
+                </button>
+                <figcaption>
+                  <strong data-i18n="guide.visual2Title">Финальный сайт</strong>
+                  <span data-i18n="guide.visual2Text">После экспорта остаётся открыть папку, проверить `index.html` и при необходимости загрузить сайт на хостинг.</span>
+                </figcaption>
+              </figure>
+            </aside>
+          </div>
+        </section>
+
+        <section class="cta-strip">
+          <div>
+            <div class="eyebrow" data-i18n="guide.ctaEyebrow">Следующий шаг</div>
+            <h2 data-i18n="guide.ctaTitle">Можно начинать с одного направления и пары проектов, а потом спокойно расширять портфолио дальше</h2>
+          </div>
+          <div class="cta-strip__actions">
+            <a class="btn btn--primary" href="#download-options" data-i18n="common.download">Скачать</a>
+            <a class="btn btn--secondary" href="./index.html" data-i18n="common.navHome">На главную</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div>
+          <strong>DevNest Portfolio</strong>
+          <p data-i18n="common.footerText">Desktop-приложение для создания портфолио разработчика и экспорта в статический сайт.</p>
+        </div>
+        <div class="footer__links">
+          <a href="./index.html" data-i18n="common.navHome">Главная</a>
+          <a href="https://github.com/Hasli4/portfolio-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="#download-options" data-i18n="common.download">Скачать</a>
+        </div>
+      </footer>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox__backdrop" type="button" aria-label="Close preview"></button>
+      <div class="lightbox__dialog" role="dialog" aria-modal="true">
+        <button class="lightbox__close" type="button" aria-label="Close preview">×</button>
+        <img class="lightbox__image" src="" alt="" />
+      </div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
