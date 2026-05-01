@@ -414,6 +414,8 @@
   const usagePanels = document.querySelectorAll('[data-usage-panel]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
   const mobileMenuQuery = window.matchMedia('(max-width: 860px)');
+  const mobileMenuCollapsePoint = 96;
+  const mobileMenuDockPoint = 8;
 
   function resolve(obj, key) {
     return key.split('.').reduce((acc, part) => (acc ? acc[part] : undefined), obj);
@@ -504,13 +506,18 @@
       return;
     }
 
-    if (window.scrollY > 86 && !mobileMenu.classList.contains('is-mobile-expanded')) {
+    if (window.scrollY <= mobileMenuDockPoint) {
+      setMobileMenuState('open');
+      return;
+    }
+
+    if (window.scrollY > mobileMenuCollapsePoint && !mobileMenu.classList.contains('is-mobile-expanded')) {
       setMobileMenuState('collapsed');
       return;
     }
 
-    if (window.scrollY <= 86) {
-      setMobileMenuState('open');
+    if (window.scrollY <= mobileMenuCollapsePoint) {
+      setMobileMenuState('expanded');
     }
   }
 
@@ -551,7 +558,7 @@
       if (isCollapsed) {
         event.preventDefault();
         setMobileMenuState('expanded');
-      } else if (!clickedControl && mobileMenuQuery.matches && window.scrollY > 86) {
+      } else if (!clickedControl && mobileMenuQuery.matches && window.scrollY > mobileMenuCollapsePoint) {
         setMobileMenuState('collapsed');
       }
     });
@@ -573,8 +580,10 @@
         const currentScrollY = window.scrollY;
         const isScrollingDown = currentScrollY > lastScrollY;
 
-        if (!mobileMenuQuery.matches || currentScrollY <= 86) {
+        if (!mobileMenuQuery.matches || currentScrollY <= mobileMenuDockPoint) {
           setMobileMenuState('open');
+        } else if (currentScrollY <= mobileMenuCollapsePoint) {
+          setMobileMenuState('expanded');
         } else if (isScrollingDown || !mobileMenu.classList.contains('is-mobile-expanded')) {
           setMobileMenuState('collapsed');
         }

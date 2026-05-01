@@ -1102,6 +1102,7 @@ body[data-language="en"] .lang-asset--ru{
     width:100%;
     max-width:calc(100vw - 20px);
     max-height:420px;
+    right:auto;
     transform-origin:top right;
     transition:
       width .42s cubic-bezier(.22,.8,.24,1),
@@ -1109,11 +1110,20 @@ body[data-language="en"] .lang-asset--ru{
       max-height .42s cubic-bezier(.22,.8,.24,1),
       padding .42s cubic-bezier(.22,.8,.24,1),
       border-radius .42s cubic-bezier(.22,.8,.24,1),
+      right .42s cubic-bezier(.22,.8,.24,1),
       background .28s ease,
       box-shadow .28s ease,
       transform .42s cubic-bezier(.22,.8,.24,1),
       opacity .28s ease;
     will-change:width, height, transform;
+  }
+
+  .topbar:focus{
+    outline:none;
+  }
+
+  .topbar.is-mobile-collapsed:focus-visible{
+    box-shadow:0 18px 46px rgba(0,0,0,.34), 0 0 0 3px rgba(143,238,224,.38);
   }
 
   .topbar,
@@ -1155,7 +1165,8 @@ body[data-language="en"] .lang-asset--ru{
   }
 
   .topbar.is-mobile-expanded{
-    left:10px;
+    left:auto;
+    right:10px;
     width:calc(100vw - 20px);
     max-width:calc(100vw - 20px);
     height:auto;
